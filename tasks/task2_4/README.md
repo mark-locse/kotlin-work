@@ -13,5 +13,5 @@
 
    Pay close attention to the error message that you see.
 
-3. Fix the error by changing `var` to `var`. You should now be able to
+3. Fix the error by changing `val` to `var`. You should now be able to
    compile and run the program successfully.
