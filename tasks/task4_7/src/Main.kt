@@ -11,11 +11,6 @@ fun main (args: Array<String>) {
     var longestLineNum = 0
     var longestLine = ""
     var currentLineNum = 1
-    println("Path: ${filePath.toAbsolutePath()}")
-    println("Size: ${filePath.fileSize()}")
-    println("Content: '${filePath.readText()}'")
-    println("Argument: '${args[0]}'")
-    println("Absolute: '${filePath.toAbsolutePath()}'")
 
     filePath.forEachLine {
         if (it.length > longestLine.length) {
