@@ -34,3 +34,4 @@ Your implementation of `triangleArea()` should reuse the code you wrote
 for your Week 1 portfolio solution. **Note that your function should not print
 anything on screen!** It should simply return the computed triangle area to
 the caller.
+ 
