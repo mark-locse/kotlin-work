@@ -7,14 +7,22 @@ typealias Triangle = Triple<Double,Double,Double>
 
 // Add isValidTriangle() and triangleArea() functions here
 fun isValidTriangle(triangle: Triangle): Boolean {
-    return false
+    val a = triangle.first
+    val b = triangle.second
+    val c = triangle.third
+    if ((a < b+c)&&(b < a+c)&&(c < a+b)) {
+        return true
+    }
+    else {
+        return false
+    }
 } 
 
 fun triangleArea(triangle: Triangle): Double {
-    val a = args[0].toDouble()
-    val b = args[1].toDouble()
-    val c = args[2].toDouble()
+    val a = triangle.first
+    val b = triangle.second
+    val c = triangle.third
     val semiperimeter = 0.5*(a+b+c)
     val area = kotlin.math.sqrt(semiperimeter*(semiperimeter-a)*(semiperimeter-b)*(semiperimeter-c))
-    return 0.0
-}
+    return area
+} 
