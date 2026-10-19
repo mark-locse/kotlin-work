@@ -21,5 +21,5 @@ fun main(args: Array<String>) {
     val result = translate[word]
 
     //println(result)
-    display(result)
+    result?.let { display(it) }
 }
