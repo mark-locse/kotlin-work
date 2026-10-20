@@ -6,4 +6,4 @@ fun main() {
     println(p.y)
     println(p.distance())
     println(p.distanceTo(p2))
-}
+} 
