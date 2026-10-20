@@ -1,4 +1,4 @@
-// COMP2850 Portfolio: Week 2
+// COMP2850 Portfolio: Week 3
 // Functions for working with triangle geometry
 
 import kotlin.math.sqrt
@@ -19,10 +19,16 @@ fun isValidTriangle(triangle: Triangle): Boolean {
 } 
 
 fun triangleArea(triangle: Triangle): Double {
-    val a = triangle.first
-    val b = triangle.second
-    val c = triangle.third
-    val semiperimeter = 0.5*(a+b+c)
-    val area = kotlin.math.sqrt(semiperimeter*(semiperimeter-a)*(semiperimeter-b)*(semiperimeter-c))
-    return area
+    if (isValidTriangle(triangle)) {
+        val a = triangle.first
+        val b = triangle.second
+        val c = triangle.third
+        val semiperimeter = 0.5*(a+b+c)
+        val area = kotlin.math.sqrt(semiperimeter*(semiperimeter-a)*(semiperimeter-b)*(semiperimeter-c))
+        return area
+    }
+    else {
+        throw IllegalArgumentException("not a valid traingle")
+    }
+
 }

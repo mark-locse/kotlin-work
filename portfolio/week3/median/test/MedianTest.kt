@@ -12,9 +12,21 @@ const val tolerance = 0.000001f
 class MedianTest : FreeSpec({
     "Exception when size=0" {
         shouldThrow<IllegalArgumentException> {
-            median(listOf())
+            median_calc(listOf())
         }
     }
 
     // Write four more tests here
+    "Works as expected when size=1" {
+        median_calc(listOf(1f)) shouldBe 1
+    }
+    "Works as expected when size=2" {
+        median_calc(listOf(2f,4f)) shouldBe 3
+    }
+    "Works as expected when size=3" {
+        median_calc(listOf(1f,43f,122f)) shouldBe 43
+    }
+    "Works as expected when size=4" {
+        median_calc(listOf(1f,6f,10f,50f)) shouldBe 8
+    }
 })
